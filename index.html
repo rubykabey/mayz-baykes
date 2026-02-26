@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayz Baykes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Poppins,sans-serif;
+  background:#fff8f4;
+  color:#4a2b2b;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+nav h3{
+  font-family:Pacifico,cursive;
+  color:#d94d82;
+}
+nav a{
+  text-decoration:none;
+  color:#4a2b2b;
+  margin-left:20px;
+  font-weight:500;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(135deg,#ffd6e8,#fff8f4);
+  position:relative;
+  overflow:hidden;
+}
+.hero h1{
+  font-family:Pacifico,cursive;
+  font-size:3.2rem;
+  color:#d94d82;
+  animation:slideUp 1.5s ease;
+}
+.hero p{
+  max-width:600px;
+  margin:15px;
+  font-size:1.1rem;
+  animation:fadeIn 2s ease;
+}
+.btn{
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  margin:8px;
+  background:#d94d82;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+.btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 8px 20px rgba(217,77,130,0.4);
+}
+
+/* FLOATING HEARTS */
+.heart{
+  position:absolute;
+  font-size:22px;
+  animation:float 6s infinite ease-in-out;
+  opacity:0.6;
+}
+.heart:nth-child(1){left:10%; top:80%;}
+.heart:nth-child(2){left:80%; top:70%; animation-delay:2s;}
+.heart:nth-child(3){left:50%; top:85%; animation-delay:4s;}
+
+/* SECTIONS */
+.section{
+  padding:90px 20px;
+  text-align:center;
+}
+.section h2{
+  font-size:2rem;
+  margin-bottom:20px;
+  color:#d94d82;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+}
+.card{
+  background:white;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+}
+
+/* INSTAGRAM SECTION */
+.insta{
+  background:linear-gradient(135deg,#ffe3ef,#fff8f4);
+  padding:70px 20px;
+}
+.insta h2{
+  font-size:2rem;
+}
+.insta p{
+  font-size:1.2rem;
+  font-weight:600;
+}
+.follow-btn{
+  margin-top:15px;
+  display:inline-block;
+  padding:12px 22px;
+  background:#d94d82;
+  color:white;
+  border-radius:25px;
+  text-decoration:none;
+  animation:pulse 2s infinite;
+}
+
+/* FOOTER */
+footer{
+  background:#4a2b2b;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* ANIMATIONS */
+@keyframes slideUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-30px);}
+  100%{transform:translateY(0);}
+}
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.07);}
+  100%{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h3>Mayz Baykes</h3>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Treats</a>
+    <a href="#">Gallery</a>
+    <a href="#">Order</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="heart">💗</div>
+  <div class="heart">🍓</div>
+  <div class="heart">🧁</div>
+
+  <h1>Hey sweet thing 🍓</h1>
+  <p>
+    Welcome to Mayz Baykes — viral-worthy cakes, cookies, and sweet treats
+    made to look beautiful and taste unforgettable.
+  </p>
+  <div>
+    <button class="btn">Order the Vibe</button>
+    <button class="btn">See Treats</button>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🔥 Viral Treats</h2>
+  <div class="cards">
+    <div class="card">🍰 Custom Cakes</div>
+    <div class="card">🍪 Soft Cookies</div>
+    <div class="card">🧁 Cupcakes</div>
+    <div class="card">🍫 Brownies</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>📸 Sweet Photo Dump</h2>
+  <p>Add your best bakery photos here for that Instagram aesthetic.</p>
+</section>
+
+<section class="section">
+  <h2>💬 Customer Love</h2>
+  <p>"Literally the prettiest cakes ever!" • "Tastes even better than it looks."</p>
+</section>
+
+<section class="insta">
+  <h2>Seen it on your feed? That's us ✨</h2>
+  <p>@mayzbaykes</p>
+  <a class="follow-btn" href="#">Follow on Instagram</a>
+</section>
+
+<footer>
+  Made with love & sugar 💗 — Mayz Baykes
+</footer>
+
+</body>
+</html>
